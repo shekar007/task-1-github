@@ -205,5 +205,4 @@ myNewFile.txt file in order.
 
 
 Please add the expected task submissions to this repository and commit it to the main branch.
-
 However, ideally it is good practice to commit to new branch, open a PR, and merge it. As an excercise, you may also create a new branch, commit to it, open a pull request, and merge it with main. However, we will only be able to record the changes made to the main branch, and by default only the main branch will be considered for evaluation. If you feel like this is getting too complicated just commit to the main branch for the time being and you can try this out when you feel more comfortable.
