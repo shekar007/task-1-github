@@ -195,8 +195,11 @@ end of the file without removing the old output already present.
 Example:
 
 dir \>\> myNewFile.txt
+
 dir \| wc \>\> myNewFile.txt
+
 any third command of your wish \>\> myNewFile.txt
+
 Above chain of commands will insert the command outputs into the
 myNewFile.txt file in order.
 
