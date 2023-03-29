@@ -1,12 +1,20 @@
+Hi everyone! During the common workshops, I had shared a document containing instructions for basic Git and GitHub usage. In this task, we would further expand on that, so that you are proficient enough in using Git and GitHub in the coming time.
+
+Link to the document: https://docs.google.com/document/d/1L64HBbNtrBU8J6WqLPHOFpW04ymtHWcMb2JbBbBYfZo/edit
+
+Books referred:-
+
+Pro Git by Chacon & Straub: https://drive.google.com/file/d/1K5cXYwrOfj2A7_D5HEXak9VkhWxZS7o9/view?usp=sharing
+Git Community Book: https://github.s3.amazonaws.com/media/book.pdf
+
 **Branching and merging:**
 
 Magic lies in git branching.Wanna see? Follow along with the demo.
 
-![](./images/media/image1.png){width="5.383721566054243in"
-height="3.589148075240595in"}
-
-![](./images/media/image2.png){width="5.453488626421697in"
-height="3.8230653980752405in"}
+![image1](https://user-images.githubusercontent.com/96539829/228453360-d7b88ee0-911b-4346-9bc8-a8439c465702.png)
+Using git branch newBranch, we created a new branch named “newBranch” and by using git checkout, we changed our current branch to it. With git branch, we enlist all the branches of the repo.
+We are creating a new file in the branch and committing it. In the next step, we see what is the difference between the main and newBranch.
+![image2](https://user-images.githubusercontent.com/96539829/228454426-161ba8f1-57bc-49aa-a1f6-662e55d7d446.png)
 
 **Merge conflicts**
 
@@ -24,11 +32,9 @@ other branch commit are a divergence of the same previous commit,
 basically two different histories of the same file. Now merging the
 other branch into master will result in a merge conflict.
 
-![](./images/media/image3.png){width="4.122093175853018in"
-height="2.945891294838145in"}
+![image3](https://user-images.githubusercontent.com/96539829/228453550-c7fe766c-1f10-4aff-ac4d-a78f86ae2620.png)
 
-![](./images/media/image4.png){width="4.002987751531059in"
-height="2.770255905511811in"}
+![image4](https://user-images.githubusercontent.com/96539829/228453582-94900188-ff41-4b64-8542-151857434f7c.png)
 
 Merge conflict marks in a file look like the following (the cat command
 just lets us view the file):
@@ -36,16 +42,12 @@ just lets us view the file):
 1.  Line 1 says the current location which is HEAD (trying to merge
     another branch (newBranch) into the current branch (main), which is
     also the location of the HEAD pointer).
-
 2.  Line 2 lists the contents present inside HEAD.
-
 3.  Line 5 mentions the location (newBranch) that you're trying to merge
     into the current location (here I am trying to merge newBranch into
     the master branch using git merge newBranch while being present in
     the master branch).
-
 4.  Line 4 lists the contents present in the newBranch branch.
-
 5.  Line 3 is a separator between the two conflicting contents in both
     the branches.
 
@@ -53,18 +55,18 @@ Programmers have to manually solve this conflict by editing the messy
 file itself. After removing the merge conflict disarrangement, my file
 looks like this:
 
-![](./images/media/image5.png){width="6.268055555555556in"
-height="0.401162510936133in"}
+<img width="708" alt="image5" src="https://user-images.githubusercontent.com/96539829/228453647-e1e9e58c-cd1b-4136-95ff-88d24a07cdc0.png">
+
 
 Now staging the clean file using git add myFile.txt and committing it
 using git commit \--message "Merge conflicts resolved", the merge
 conflict has been resolved.
 
-![](./images/media/image6.png){width="6.268055555555556in"
-height="0.17248468941382328in"}
+<img width="733" alt="image6" src="https://user-images.githubusercontent.com/96539829/228453798-9e5ad78e-66cf-44fe-a372-6cb777f2f114.png">
 
-![](./images/media/image7.png){width="6.268055555555556in"
-height="0.29791666666666666in"}
+<img width="1369" alt="image" src="https://user-images.githubusercontent.com/96539829/228457589-5c16033f-ff62-4d94-b4b6-3e4488e52cf9.png">
+
+
 
 **Where can you get merge conflicts?**
 
@@ -79,11 +81,8 @@ line of course) and vice versa.
 Follow along to see merge conflicts in action
 
 1.  Push your local repository on GitHub.
-
 2.  Edit a line in a file in your local repository.
-
 3.  Edit the same file on the same line on GitHub.
-
 4.  Run git pull origin main locally to merge your GitHub repository
     into your local repository.
 
@@ -103,15 +102,13 @@ command.
 
 1.  The git fetch origin main command downloads the new changes from
     GitHub but doesn't merge it locally yet.
-
 2.  The git diff main..origin/main command lists the new changes on the
     remote that is fetched above from the GitHub repository. This diff
     tool is used to diagnose any potential merge conflicts.
-
 3.  Finally the git merge command actually merges the newly downloaded
     remote main branch into the local main branch.
 
-**[Submodules]{.underline}**
+**Submodules**
 
 Oftentimes one needs to use someone else's work from within their own
 repository. A common issue arises in these scenarios: you want to be
@@ -136,40 +133,30 @@ need to 
 
 See carefully the following demo
 
-![](./images/media/image8.png){width="5.238371609798775in"
-height="3.623611111111111in"}
-
-![](./images/media/image9.png){width="5.81053258967629in"
-height="1.7561636045494313in"}
-
+![image8](https://user-images.githubusercontent.com/96539829/228456696-73cb3068-15dd-407c-a05f-c5ca0b6734f4.png)
+<img width="1307" alt="image9" src="https://user-images.githubusercontent.com/96539829/228454095-5b8e457f-a282-42ca-b735-3081879a0c0d.png">
 Whenever a repository having a submodule is pushed on GitHub, it shows
 the submodule not as a regular folder but as a link to the submodule
 repository.
-
-![](./images/media/image10.png){width="5.231802274715661in"
-height="2.4999737532808397in"}
-
+<img width="1038" alt="image10" src="https://user-images.githubusercontent.com/96539829/228454135-3676edad-1013-4982-82d8-ccc2296c5d44.png">
 Sometimes one needs to delete the submodule. Deleting a submodule
 involves 3 steps
 
 1.  Deleting the submodule folder itself
-
 2.  Deleting the folder .git/modules/submoduleName (mind the 'dot')
-
 3.  Editing the .gitmodules file and removing the lines for the
     submodule
-
 Now staging and committing the repository again will have the submodule
 removed completely. If you push the repo, the link to the submodule is
 gone.
 
-**[Task]{.underline}**
+
+**Task**
 
 This is to see if you have understood using git from **terminal** in
 conjunction with GitHub. Create a repository, and try out as many of
 these commands as you can - create multiple branches, commits; try to
 merge them. 
-
 *Surf online (Pro Git book is the second best resource after
 StackOverflow) how you can undo a commit (for those oopsies and spelling
 mistakes, go back to a different commit to view older files, perhaps
