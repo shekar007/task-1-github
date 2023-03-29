@@ -117,8 +117,7 @@ from within the other.
 
 The way you add another repository into your repository is by doing
 
-git submodule add
-[[https://github.com/userName/repoName.git]{.underline}](https://github.com/userName/repoName.git)
+git submodule add https://github.com/userName/repoName.git
 
 Anything you do outside of the submodule folder doesn't affect the
 submodule folder, but every time you do anything in your submodule, you
@@ -180,7 +179,7 @@ For this type the commands:
 You can submit the outputs of these commands to us, preferably as text
 file (.txt). Screenshots are also welcome.
 
-**[Tip]{.underline}**
+**Tip**
 
 To put output of any command into a text file, use the following trick:
 
