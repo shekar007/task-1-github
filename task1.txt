@@ -1,0 +1,12 @@
+no changes added to commit (use "git add" and/or "git commit -a")
+chandu@chandu-ubuntu:~/task1$ git log --graph --pretty="%C(bold blue)%h" --decorate --all
+* 2dae334
+chandu@chandu-ubuntu:~/task1$ git log --graph --pretty="%C(yellow) Hash: %h %C(blue)Date: %ad %C(red) Message: %s " --date=human
+
+*  Hash: 2dae334 Date: 2 minutes ago  Message: first commit 
+chandu@chandu-ubuntu:~/task1$ git log --all --decorate --oneline --graph
+
+* 2dae334 (HEAD, master) first commit
+chandu@chandu-ubuntu:~/task1$ 
+
+
